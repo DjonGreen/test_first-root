@@ -9,3 +9,9 @@ def home(request):
 
 def feedback(request):
     return render(request, 'feedback.html')
+
+def reverse(request):
+    user_text = request.GET['usertext']
+    print(user_text)
+    reverse_user_text = user_text[::-1]
+    return render(request, 'reverse.html', {'usertext': user_text, 'reversetext': reverse_user_text})

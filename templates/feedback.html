@@ -1,8 +1,10 @@
 <h2>Your feedback!</h2>
-<label for="pepiter">Review:</label>
-<br><br>
-<textarea id="pepiter" name="pepiter" rows="10" cols="50" autofocus maxlength="140">
-Input here your feedback.
-</textarea>
-<br><br>
-<input type="submit" value="Отправить!">
+<form action="{% url 'reverse' %}">
+<label for="usertext">Review:</label>
+    <br><br>
+    <textarea name="usertext" rows="10" cols="50" autofocus maxlength="140">
+    Input here your feedback.
+    </textarea>
+    <br><br>
+    <input type="submit" value="Reverse!">
+</form>
